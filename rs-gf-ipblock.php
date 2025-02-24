@@ -2,7 +2,7 @@
 /*
 Plugin Name: RS Gravity Forms IP Block
 Description: Block IP addresses from submitting Gravity Forms. To use this plugin, provide an array of ip address strings using the filter <code>rsgf/get_ip_block_list</code>. To instantly delete blocked entries add: <code>add_filter( 'rsgf/delete_blocked_entries', '__return_true' );</code>
-Version: 1.0.0
+Version: 1.0.1
 Author: Radley Sustaire
 Author URI: https://radleysustaire.com/
 GitHub Plugin URI: https://github.com/RadGH/RS-Gravity-Forms-IP-Block

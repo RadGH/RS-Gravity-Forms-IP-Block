@@ -27,5 +27,9 @@ The IP address is based on these server variables:
 
 ## Changelog
 
+### 1.0.1
+* Specified ip "block" list in filters and function names
+* Renamed function in readme example
+
 ### 1.0.0
 * Initial release
