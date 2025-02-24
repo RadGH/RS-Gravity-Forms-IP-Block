@@ -13,7 +13,7 @@ Author URI: https://radleysustaire.com/
 // Specify custom block list
 function rsgf_filter_ip_list( $ip_list ) {
 	return array(
-		'127.0.0.1',
+		'123.45.67.89',
 	);
 }
 add_filter( 'rsgf/get_ip_list', 'rsgf_filter_ip_list' );
