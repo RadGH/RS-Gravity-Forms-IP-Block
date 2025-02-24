@@ -11,7 +11,7 @@ function rsgf_filter_ip_list( $ip_list ) {
 		'xxx.xxx.xxx.xxx',
 	);
 }
-add_filter( 'rsgf/get_ip_list', 'rsgf_filter_ip_list' );
+add_filter( 'rsgf/get_ip_block_list', 'rsgf_filter_ip_list' );
 ```
 
 To instantly delete blocked entries add: 
