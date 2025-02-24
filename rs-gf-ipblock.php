@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: RS Gravity Forms IP Block
-Description: Block IP addresses from submitting Gravity Forms. To use this plugin, provide an array of ip address strings using the filter <code>rsgf/get_ip_list</code>. To instantly delete blocked entries add: <code>add_filter( 'rsgf/delete_blocked_entries', '__return_true' );</code>
+Description: Block IP addresses from submitting Gravity Forms. To use this plugin, provide an array of ip address strings using the filter <code>rsgf/get_ip_block_list</code>. To instantly delete blocked entries add: <code>add_filter( 'rsgf/delete_blocked_entries', '__return_true' );</code>
 Version: 1.0.0
 Author: Radley Sustaire
 Author URI: https://radleysustaire.com/
@@ -18,7 +18,7 @@ function rsgf_filter_ip_list( $ip_list ) {
 		'123.45.67.89',
 	);
 }
-add_filter( 'rsgf/get_ip_list', 'rsgf_filter_ip_list' );
+add_filter( 'rsgf/get_ip_block_list', 'rsgf_filter_ip_list' );
 
 // Delete blocked entries (instead of marking as spam)
 add_filter( 'rsgf/delete_blocked_entries', '__return_true' );
@@ -48,8 +48,8 @@ function rsgf_get_ip() {
  *
  * @return array
  */
-function rsgf_get_ip_list() {
-	return apply_filters( 'rsgf/get_ip_list', array() );
+function rsgf_get_ip_block_list() {
+	return apply_filters( 'rsgf/get_ip_block_list', array() );
 }
 
 
@@ -67,7 +67,7 @@ function rsgf_filter_spam_entry( $is_spam, $form, $entry ) {
 	$ip = rsgf_get_ip();
 	
 	// Get the list of blocked IP addresses
-	$blocked_ips = rsgf_get_ip_list();
+	$blocked_ips = rsgf_get_ip_block_list();
 	
 	// Check if the IP address is in the blocked list
 	if ( in_array( $ip, $blocked_ips ) ) {
