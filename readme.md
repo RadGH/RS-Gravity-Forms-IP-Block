@@ -6,12 +6,12 @@ To use this plugin, add this code to functions.php and replace the IP list with 
 
 ```php
 // Specify custom block list
-function rsgf_filter_ip_list( $ip_list ) {
+function theme_get_gf_ip_block_list( $ip_list ) {
 	return array(
 		'xxx.xxx.xxx.xxx',
 	);
 }
-add_filter( 'rsgf/get_ip_block_list', 'rsgf_filter_ip_list' );
+add_filter( 'rsgf/get_ip_block_list', 'theme_get_gf_ip_block_list' );
 ```
 
 To instantly delete blocked entries add: 
