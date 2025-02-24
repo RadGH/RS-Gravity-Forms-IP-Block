@@ -5,6 +5,8 @@ Description: Block IP addresses from submitting Gravity Forms. To use this plugi
 Version: 1.0.0
 Author: Radley Sustaire
 Author URI: https://radleysustaire.com/
+GitHub Plugin URI: https://github.com/RadGH/RS-Gravity-Forms-IP-Block
+GitHub Branch: master
 */
 
 // EXAMPLE USAGE (Put in functions.php)
